@@ -34,28 +34,52 @@
 
         </div>
         </nav>
-
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     </header>
     
-    <h1>Trabajá con Nosotros</h1>
+    <div class="tranos"><h1>Trabajá con Nosotros</h1></div>
 
-    <h4>Muchas gracias por interesarte en ser parte de nuestro equipo. Dejanos tus datos, tu CV y te contactaremos a la brevedad</h4>
+    <div class="tranos2"><h4>Muchas gracias por interesarte en ser parte de nuestro equipo. Dejanos tus datos, tu CV y te contactaremos a la brevedad</h4></div>
 
     <form action="/procesar.php" method="POST" enctype="multipart/form-data">
-        <label for="input1">Nombre</label>
-        <input type=" text" name="nombre" id="input1" placeholder="Nombre en mayúsculas" size="10" >
+        <div class="contenedor-nombre">
+            <label for="input1">Nombre</label>
+            <input type=" text" name="nombre" id="input1" placeholder="Nombre" size="20" >
+            <img src="/helado/img/trashcan-155299_640.png" id="nombre-icon"
+            class="icon"
+            onclick="borrar ()">
+         </div>
+         <script src="/helado/js.js"></script>
+
         <br><br>
-        <label for="input2">Apellido</label>
+
+        <div class="contenedor-apellido"><label for="input2">Apellido</label>
         <input type=" text" name="ape" id="input2" placeholder="Apellido en mayúsculas" Size="25" maxlength="20">
+        <img src="/helado/img/trashcan-155299_640.png" id="apellido-icon"
+        class="icon"
+        onclick="borrar2 ()">
+     </div>
+     
         <br><br>
-        <label for="email1">Correo</label>
-        <input type="email" name="correo" id="email1">
-        <br><br>
+
+        <div class="contenedor-mail">        
+            <label for="email1">Correo</label>
+            <input type="email" name="correo" id="email1">
+            <img src="/helado/img/trashcan-155299_640.png" id="contenedor-mail"
+        class="icon"
+        onclick="borrar3 ()">
+    </div>
+
+        <br><br> 
+        <div class="contenedor-edad">
         <label for="edad">Edad</label>
         <input type="number" name="miedad" id="edad" min="18" max="65">
+        </div>
+
         <br><br>
         
-            <h6>Zona donde podes trabajar</h6>
+        <Div class="Zona">
+            <h6>Zona donde podes trabajar</h6> 
         <input type="radio" name="provincia" id="radio1" value="1">
         <label for="radio1">CABA</label>
         <br>
@@ -64,21 +88,33 @@
         <br>
         <input type="radio" name="provincia" id="radio3" value="3">
         <label for="radio3">Otro</label>
+        </div>
+        <br>
+        <div class="contenedor-contanos">
+        <label for="com">Contanos algo de vos: </label>
+        <br>
+        <textarea name="Comentario" id="com" size="5000"></textarea>
+            <img src="/helado/img/trashcan-155299_640.png" id="contanos-icon"
+            class="icon"
+            onclick="borrar4 ()">
+        </div>
         <br><br>
-        <label for="com">Contanos algo de vos</label>
-        <br><br>
-        <textarea name="Comentario" id="com" size="200"></textarea>
-        <br><br>
-        <div>
+        <div class="carga" >
             <label for="CV"> Cargá tu CV:</label>
             <Input type="file" name="Cargá tu CV" id="CV">
         </div>
+        <br>
+        <div class="bases">
         <input type="checkbox" name="acepto" id="Acepta">
-        <label for="Acepta">Acepto las bases y condiciones.</label>
+        <label for="Acepta">Declaro que mis datos son verdaderos y verificables</label>
+        </div>
         <br><br>
         <div class="g-recaptcha" data-sitekey="6LeEQUcoAAAAAAq3idIcmLrFxc4RrRBwK30-obuT"></div>
-        <input type="submit" value="Enviar">
-        <input type="reset" value="Limpiar Formulario">
+        <br><br>
+        <Div class="enviar">
+        <input class="button" type="submit" value="Enviar">
+        <input class="button" type="reset" value="Limpiar Formulario">
+        </Div>
     </form>
 </body>
 </html>
