@@ -16,9 +16,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
     <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
-
+<script src="/helado/js.js"></script>
 
 <body>
+    <div class="container-consultas">
     <header class="encabezado">
 
         <div class="titulo1">
@@ -34,26 +35,49 @@
 
         </div>
         </nav>
-
     </header>
 
-    <h1>Contacto</h1>
-
+    <div class="Consulta-Sugerencia">
+    <h1>Contacto</h1> 
+</div>
+<div class="sitenes" >
     <h2>Si tenes alguna consulta o sugerencia, completá este formulario, y nos contactamos con vos a la brevedad</h2>
-
+</div>
     <form action="/procesar.php" method="POST">
-        <label for="input1">Nombre</label>
-        <input type=" text" name="nombre" id="input1" placeholder="Nombre en mayúsculas" size="10" >
+        <div class="consulta-nombre">
+        <label for="input5">Nombre</label>
+        <input type=" text" name="nombre" id="input5" placeholder="Nombre" size="10" >
+        <img src="/helado/img/trashcan-155299_640.png" id="nombre-icon"
+        class="icon"
+        onclick="borrar5 ()">
+    </div>
         <br><br>
+        <div class="consulta-Apellido">
         <label for="input2">Apellido</label>
-        <input type=" text" name="ape" id="input2" placeholder="Apellido en mayúsculas" Size="25" maxlength="20">
+        <input type=" text" name="ape" id="input6" placeholder="Apellido" Size="25" maxlength="20">
+        <img src="/helado/img/trashcan-155299_640.png" id="nombre-icon"
+        class="icon"
+        onclick="borrar6 ()">
+        </div>
+        <br>
+        <div class="contenedor-mail2">        
+            <label for="email1">Correo</label>
+            <input type="email" name="correo" id="input7">
+            <img src="/helado/img/trashcan-155299_640.png" id="nombre-icon"
+        class="icon"
+        onclick="borrar7 ()">
+    </div>
         <br><br>
-        <label for="email1">Correo</label>
-        <input type="email" name="correo" id="email1">
+        <div class="consulta-teléfono">
+        <label for="Telefono">Telefono</label>
+        <input type="text" name="Tel" id="input8">
+        <img src="/helado/img/trashcan-155299_640.png" id="nombre-icon"
+        class="icon"
+        onclick="borrar8 ()">
+    </div>
         <br><br>
-        <label for="telefono">Telefono</label>
-        <input type="number" name="Tel" id="telefono">
-        <br><br>
+        <Div class="consulta-Provincia">
+            <h3>Zona</h3>
         <input type="radio" name="provincia" id="radio1" value="1">
         <label for="radio1">CABA</label>
         <br>
@@ -61,22 +85,53 @@
         <label for="radio2">Gran Buenos Aires</label>
         <br>
         <input type="radio" name="provincia" id="radio3" value="3">
-        <label for="radio3">Otro</label>
+        <label for="radio3">Otro</label></Div>
         <br><br>
-        <label for="com">Comentario</label>
-        <br><br>
-        <textarea name="Comentario" id="com" cols="30" rows="10"></textarea>
-        <br><br>
+        <Div class="consulta-Comentario">
+        <label for="com">Comentario</label> 
+        <br>
+        <textarea name="Comentario:" id="input9" cols="30" rows="10"></textarea>
+        <img src="/helado/img/trashcan-155299_640.png" id="nombre-icon"
+        class="icon"
+        onclick="borrar9 ()">
+    </Div>
+        <br>
+        <div class="acepto">
         <input type="checkbox" name="acepto" id="Acepta">
-        <label for="Acepta">Acepto las bases y condiciones.</label>
+        <label for="Acepta">Estoy de acuerdo con que se utilice mi informacion.</label>
+    </div>
         <br><br>
         <div class="g-recaptcha" data-sitekey="6LcTYUYoAAAAAIOUz6V9UA8mDNnNNNzkkwFG_Bmg">
-
-
         </div>
-        <input type="submit" value="Enviar">
-        <input type="reset" value="Limpiar Formulario">
-
+        <br>
+<div class="enviarylimpiar">
+        <input class="button" type="submit" value="Enviar">
+        <input class="button" type="reset" value="Limpiar Formulario">
+</div>
     </form>
+
+</div>
+
+
+<footer class="footer">
+
+
+
+  <div class="nav2">
+    <div><a href="./pages/trabajanosotros.html">Trabaja con nosotros</a></div>
+    <div><a href="./pages/consultas.html">Consultas</a></div>
+
+  </div>
+
+  <div class="icono-footer">
+    <div><a href="https://www.facebook.com/heladosdaniel/?fref=ts"><span class="fab fa-facebook"></span> </a>
+    </div>
+    <div><a href="https://www.instagram.com/danielhelados/"><span class="fab fa-instagram"></span> </a></div>
+    <div><a href="https://twitter.com/heladosdaniel"><span class="fab fa-twitter"></span> </a></div>
+
+  </div>
+</footer>
+</div>
+    </div>
 </body>
 </html>
